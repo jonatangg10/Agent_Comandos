@@ -4,5 +4,5 @@
 <p align="center"><b>Si se puede inmaginar, se puede programar</b></p>
 
 
-No se encontró ningún archivo de hosts conocidos en /var/jenkins_home/.ssh/known_hosts. Asegúrese de crear uno en esta ruta y de que Jenkins pueda leerlo.
-El intercambio de claves no finalizó, la conexión está cerrada
+WARNING: No entry currently exists in the Known Hosts file for this host. Connections will be denied until this new host and its associated key is added to the Known Hosts file.
+Key exchange was not finished, connection is closed.
