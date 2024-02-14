@@ -3,6 +3,6 @@
 <p align="center"><a>Configuración de un <b>Agent</b> y la ejecución de comandos <b>Linux</b></a></p>
 <p align="center"><b>Si se puede inmaginar, se puede programar</b></p>
 
-WARNING: No entry currently exists in the Known Hosts file for this host. Connections will be denied until this new host and its associated key is added to the Known Hosts file.
-Key exchange was not finished, connection is closed.
+ERROR: Server rejected the 1 private key(s) for jonatan (credentialId:Credenciales SHH para agente Ubuntu/method:publickey)
+ERROR: Failed to authenticate as jonatan with credential=Credenciales SHH para agente Ubuntu
 
