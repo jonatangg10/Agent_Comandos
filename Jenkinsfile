@@ -8,8 +8,7 @@ pipeline {
         stage('Build') { 
             agent { label 'any' }
             steps {
-                echo pwd
-                sh 'printenv'
+                echo "${WORKSPACE}"
             }
         }
     }
