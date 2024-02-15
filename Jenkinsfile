@@ -115,7 +115,7 @@ pipeline {
                                             <br>
                                                 <div class="container">
                                                     <div class="header">
-                                                        <h1>Notificacion de Jenkins</h1>
+                                                        <h1>Notificacion de Jenkins ${env.COLORFINAL}</h1>
                                                     </div>
                                                     <div class="content">
                                                         <p>Estimado usuario,</p>
