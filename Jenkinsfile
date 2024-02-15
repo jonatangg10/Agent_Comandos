@@ -26,7 +26,7 @@ pipeline {
                      }
                      // echo "${prueba}"
                  
-                     echo ${env.COLORFINAL}
+                     echo env.COLORFINAL
              }
             emailext subject: "Jenkins: ${currentBuild.getFullDisplayName()}",          
                         body : """
