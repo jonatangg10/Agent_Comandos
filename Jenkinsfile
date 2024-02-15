@@ -9,7 +9,7 @@ pipeline {
             }
             steps {
                 sh 'echo "Clonammos el repositorio github : jonatangg10"'
-                git 'https://github.com/tu_usuario/tu_repositorio.git'
+                git 'https://github.com/jonatangg10/Agent_Comandos.git'
             }
         }
         
