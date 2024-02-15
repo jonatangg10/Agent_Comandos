@@ -12,6 +12,9 @@ pipeline {
             steps {
                 echo pwd()
                 sh 'printenv'
+                timeout(time: 10, unit: 'SECONDS') {
+                    sh 'sleep 15'
+                }
             }
         }
     }
