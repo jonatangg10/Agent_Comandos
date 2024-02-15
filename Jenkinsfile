@@ -19,13 +19,12 @@ pipeline {
         always {
              script {
                      def valor = currentBuild.result
-                     // echo "${currentBuild.result}"
                      echo "valor: ${valor}"
                      if ("${valor}" == "SUCCESS"){
                          env.COLORFINAL = "green"
+                     }else{
+                         env.COLORFINAL = "red"
                      }
-                     // echo "${prueba}"
-                 
                      echo env.COLORFINAL
              }
             emailext subject: "Jenkins: ${currentBuild.getFullDisplayName()}",          
