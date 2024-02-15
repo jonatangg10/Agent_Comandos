@@ -21,7 +21,7 @@ pipeline {
                      def valor = "${currentBuild.result}"
                      // echo "${currentBuild.result}"
                      echo "valor: ${valor}"
-                     def color (${valor}){
+                     def color ("${valor}"){
                         return (${valor} == "SUCCESS" ? 'green' : 'red')
                      }
                     echo "${color}"
