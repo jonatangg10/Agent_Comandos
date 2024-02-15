@@ -21,10 +21,8 @@ pipeline {
                      def valor = currentBuild.result
                      // echo "${currentBuild.result}"
                      echo "valor: ${valor}"
-                     def color (valor){
-                        return (valor == "SUCCESS" ? 'green' : 'red')
-                     }
-                     echo "${color(valor)}"
+                     def prueba = if (1>2 ? 'hola' : 'adios')
+                     echo "${prueba}"
                  // env.COLOR_FUNCION = color
                  // echo ${env.COLOR_FUNCION}
              }
