@@ -22,11 +22,11 @@ pipeline {
                      // echo "${currentBuild.result}"
                      echo "valor: ${valor}"
                      if ("${valor}" == "SUCCESS"){
-                        echo "Bien"
+                         env.COLORFINAL = "green"
                      }
                      // echo "${prueba}"
-                 // env.COLOR_FUNCION = color
-                 // echo ${env.COLOR_FUNCION}
+                 
+                     echo ${env.COLORFINAL}
              }
             emailext subject: "Jenkins: ${currentBuild.getFullDisplayName()}",          
                         body : """
