@@ -2,33 +2,34 @@ pipeline {
     agent any
     
     stages {
-        stage('Etapa de Construcción') {
-            agent {
-                label 'linux' // Este agente se ejecutará en un nodo etiquetado como 'linux'
-            }
-            steps {
-                // Agrega aquí los pasos de construcción de tu proyecto
-                sh 'echo "Construyendo el proyecto en un agente Linux"'
-            }
-        }
         
-        stage('Etapa de Pruebas') {
+        stage('Clonar Repositorio') {
             agent {
                 label 'linux'
             }
             steps {
-                // Agrega aquí los pasos de pruebas de tu proyecto
-                sh 'echo "Ejecutando pruebas en un agente Linux"'
+                sh 'echo "Clonammos el repositorio github : jonatangg10"'
+                git 'https://github.com/tu_usuario/tu_repositorio.git'
             }
         }
         
-        stage('Etapa de Despliegue') {
+        stage('Construir') {
             agent {
                 label 'linux'
             }
             steps {
-                // Agrega aquí los pasos de despliegue de tu proyecto
-                sh 'echo "Desplegando el proyecto en un agente Linux"'
+                sh 'echo "Creamos un proyecto Java con: Maven"'
+                sh 'mvn clean package'
+            }
+        }
+        
+        stage('Pruebas Unitarias') {
+            agent {
+                label 'linux'
+            }
+            steps {
+                sh 'echo "Hacemos un test a Maven"'
+                sh 'mvn test'
             }
         }
     }
