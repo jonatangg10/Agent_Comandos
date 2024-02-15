@@ -20,6 +20,8 @@ pipeline {
              script {
                     def valor = "${currentBuild.result}"
                     def color = (valor == 'SUCCESS') ? 'green' : 'red'
+                    // style='color: "${color}"'
+                     echo "echo ${color}"
              }
             emailext subject: "Jenkins: ${currentBuild.getFullDisplayName()}",          
                         body : """
@@ -117,7 +119,7 @@ pipeline {
                                                         <div style="text-align: center;">
                                                             <h2>Detalles del Build:</h2>
                                                             <p>Numero del Build: <strong>${currentBuild.getFullDisplayName()}</strong></p>
-                                                            <p>Estado del Build: <strong style='color: "${color}"'>${currentBuild.result}</strong></p>
+                                                            <p>Estado del Build: <strong>${currentBuild.result}</strong></p>
                                                         </div>
                                                         <div style="text-align: center;">
                                                             <p>Puedes encontrar mas detalles en el siguiente enlace:</p>
