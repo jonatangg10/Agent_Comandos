@@ -18,9 +18,9 @@ pipeline {
     post {
         always {
              script {
-                     def valor = ${currentBuild.result}
+                     // def valor = ${currentBuild.result}
                      echo ${currentBuild.result}
-                     echo "valor: ${valor}"
+                     // echo "valor: ${valor}"
                      // def color (valor){
                         // return (valor == "SUCCESS" ? 'green' : 'red')
                      // }
