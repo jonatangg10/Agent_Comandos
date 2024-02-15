@@ -1,6 +1,8 @@
 pipeline {
     // agent any
-    agent 'linux'
+    agent {
+        label 'linux'
+    }
     
     stages {
         stage('Impresión de las variables del Build') { 
