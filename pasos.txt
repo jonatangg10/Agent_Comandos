@@ -1,1 +1,14 @@
-1. 
+1. Ingresar a Jenkins.
+2. Administar Jenkins.
+3. Nodes.
+4. New node.
+5. Crear el nodo.
+6. Generar nueva claves ( ssh-keygen ) la clave privada (id_rsa), clave publica (id_rsa.pub) y authorized_keys (copia de la llave publica).
+7. En la credencial del nodo copiar id (Dirección ip) , la private key, y otras configuraciones ssh.
+8. Crear el nodo.
+9. Mirar el log del nodo, comprobar que todo este bien.
+10. Probar el agent.
+
+        agent {
+            label 'linux'
+        }
