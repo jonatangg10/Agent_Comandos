@@ -21,7 +21,7 @@ pipeline {
                      def valor = currentBuild.result
                      // echo "${currentBuild.result}"
                      echo "valor: ${valor}"
-                     if ("valor" == "valor"){
+                     if ("${valor}" == "SUCCESS"){
                         echo "Bien"
                      }
                      // echo "${prueba}"
