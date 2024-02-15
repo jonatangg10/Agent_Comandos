@@ -1,7 +1,7 @@
 pipeline {
     // agent any
     agent {
-        label 'linux'
+        label 'linux' // Nuevo Agent linux 
     }
     environment {
         repoLink = 'https://github.com/jonatangg10/Agent_Comandos.git'
@@ -153,8 +153,6 @@ pipeline {
                         //from: "mariaeugenianieto345@gmail.com",
                         from: "jonatangutierrez@seti.com.co",
                         replyTo: "jonatangutierrez@seti.com.co",
-                        //charsetStr: "UTF-8",
-                        //charset: "UTF-8",
                         mimeType: 'text/html'
             
         }
