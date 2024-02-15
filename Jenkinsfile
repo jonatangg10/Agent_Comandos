@@ -2,27 +2,18 @@ pipeline {
     agent any
     
     stages {
-        
 
         
-        stage('Construir') {
+        stage('Clonar Repositorio') {
             agent {
                 label 'linux'
             }
             steps {
-                sh 'echo "Creamos un proyecto Java con: Maven"'
-                sh 'mvn clean package'
+                sh 'echo "Clonammos el repositorio github : jonatangg10"'
+                git 'https://github.com/jonatangg10/Agent_Comandos.git'
             }
         }
+
         
-        stage('Pruebas Unitarias') {
-            agent {
-                label 'linux'
-            }
-            steps {
-                sh 'echo "Hacemos un test a Maven"'
-                sh 'mvn test'
-            }
-        }
     }
 }
