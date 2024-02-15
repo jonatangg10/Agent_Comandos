@@ -1,8 +1,7 @@
 pipeline {
-    agent any
+    agent any  
     
     stages {
-
         stage('Impresión de las variables del Build') { 
             agent {
                 label 'linux'
@@ -12,6 +11,6 @@ pipeline {
                 sh 'printenv'
             }
         }
-        
     }
+    
 }
