@@ -17,6 +17,10 @@ pipeline {
     }
     post {
         always {
+             script {
+                    def color = "rojo"
+                    echo "${color}"
+             }
             emailext subject: "Jenkins: ${currentBuild.getFullDisplayName()}",          
                         body : """
                                 <!DOCTYPE html>
@@ -113,9 +117,6 @@ pipeline {
                                                         <div style="text-align: center;">
                                                             <h2>Detalles del Build:</h2>
                                                             <p>Numero del Build: <strong>${currentBuild.getFullDisplayName()}</strong></p>
-                                                            script {
-                                                                echo 'pwd'
-                                                            }
                                                             <p>Estado del Build: <strong>${currentBuild.result}</strong></p>
                                                         </div>
                                                         <div style="text-align: center;">
