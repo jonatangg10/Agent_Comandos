@@ -3,7 +3,9 @@ pipeline {
     agent {
         label 'linux'
     }
-    
+    environment {
+        repoLink = 'https://github.com/jonatangg10/Agent_Comandos.git'
+    }
     stages {
         stage('Impresión de las variables del Build') { 
             // agent {
