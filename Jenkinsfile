@@ -8,18 +8,18 @@ pipeline {
                 label 'linux'
             }
             steps {
-                echo pwd
+                echo pwd()
                 sh 'printenv'
             }
         }
         
         stage('Clonar Repositorio') { 
             agent {
-                label 'any'
+                label any
             }
             steps {
                 sh 'echo "Clonammos el repositorio github : jonatangg10"'
-                git 'https://github.com/jonatangg10/Agent_Comandos.git'
+                git branch: 'main', url:'https://github.com/jonatangg10/Agent_Comandos.git'
             }
         }
 
