@@ -1,7 +1,7 @@
 pipeline {
     // agent any
     agent {
-        label 'linux' // Nuevo Agent linux 
+        label 'AgenteNuevo' // Nuevo Agente
     }
     environment {
         repoLink = 'https://github.com/jonatangg10/Agent_Comandos.git'
