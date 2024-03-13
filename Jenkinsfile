@@ -1,7 +1,7 @@
 pipeline {
     // agent any
     agent {
-        label 'AgenteNuevo' // Nuevo Agente
+        label 'jonatan' // Nuevo Agente
     }
     environment {
         repoLink = 'https://github.com/jonatangg10/Agent_Comandos.git'
@@ -148,7 +148,7 @@ pipeline {
                                         </body>
                                 </html>
                                 """,
-                        to: "marianalaverde29@gmail.com",
+                        to: "mariaeugenianieto345@gmail.com",
                         // to: "jonatangutierrez@seti.com.co",
                         //from: "mariaeugenianieto345@gmail.com",
                         from: "jonatangutierrez@seti.com.co",
